@@ -27,6 +27,7 @@ TIME_ZONE = 'America/Chicago'
 LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
+SITE_NAME = 'server'
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.

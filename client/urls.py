@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import *
 
 urlpatterns = patterns('',
-    (r'^', 'client.views.status'),
+    (r'^', 'status.app_info'),
 )
