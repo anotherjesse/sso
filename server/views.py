@@ -6,5 +6,5 @@ def logout(request, next_page=None):
     return HttpResponseRedirect(next_page or '/')
 
 def status(request):
-    return HttpResponse('hello: %s' % request.user)
+    return HttpResponse('SERVER: hi %s' % request.user)
     
