@@ -1,4 +1,7 @@
 import os
+import sys
+
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'shared'))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -50,13 +53,12 @@ SECRET_KEY = 'faqwc-q&eo15xnc1oufh(nrld1!k)2ip6_6kkmqm&whwq5b8uo'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.load_template_source',
     'django.template.loaders.app_directories.load_template_source',
-#     'django.template.loaders.eggs.load_template_source',
 )
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'server.sso.SSOMiddleware',
+    'pearl.sso.AuthMiddleware',
 )
 
 ROOT_URLCONF = 'server.urls'

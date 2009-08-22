@@ -1,4 +1,7 @@
-# Django settings for client project.
+import os
+import sys
+
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'shared'))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -56,7 +59,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'pearl.sso.AuthMiddleware',
 )
 
 ROOT_URLCONF = 'client.urls'
