@@ -1,1 +1,3 @@
 *.pyc
+server/server.db
+client/client.db
