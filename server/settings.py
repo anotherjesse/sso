@@ -1,4 +1,4 @@
-# Django settings for server project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -62,9 +62,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'server.urls'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates'),
 )
 
 INSTALLED_APPS = (
